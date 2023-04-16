@@ -1,0 +1,126 @@
+footer{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    background: $color3;
+    .footer-left{
+            display: grid;
+            grid-template-rows: 15% 15% 35% 35%;
+            margin: 30px auto;
+            width: 90%;
+            grid-template-areas: 
+            "name"
+            "email"
+            "message"
+            "sub";
+            gap: 20px;
+            font-family: $font2;
+            
+            label{
+                display: block;
+                padding: 20px;
+                font-family: $font1;
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            input{
+                display: block;
+                width: 90%;
+                margin: 0 auto;
+                height: 50px;
+                background: transparent;
+                border: 1px solid rgba(0, 0, 0, 0.199);
+                font-family: $font2;
+               
+            }
+            textarea{
+                display: block;
+                resize: none;
+                height: 100px;
+                width: 90%;
+                margin: 0 auto;
+                padding-bottom: 20px;
+                background: transparent;
+                border: 1px solid rgba(0, 0, 0, 0.199);
+            }
+            .input-name{
+                grid-area: name;
+                display: block;
+            }
+            .input-email{
+                grid-area: email;
+                display: block;
+            }
+            .input-message{
+                grid-area: message;
+                display: block;
+            }
+            #submit{
+                grid-area: sub;
+                display: block;
+                margin: 20px 0 10px 20px;
+                width: 40%;
+                border: 1px solid $color2;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+                font-weight: 700;
+        }
+    }
+    .footer-right{
+        display: grid;
+        grid-template-rows: 25% 25% 25% 25%;
+        align-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.199);
+        
+        h6{
+            font-size: 0.8rem;
+            font-family: $font1;
+            text-transform: uppercase;
+            width: 30%;
+        }
+        p{
+            color: black;
+            font-family: $font2;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 0.8rem;
+            width: 80%;
+            margin: 0 auto;
+            padding: 30px 0;
+            line-height: 20px;
+            text-align: left;
+            min-height: 120px;
+        }
+        .footer-right-container{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            padding: 30px 0 20px 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.199);
+            height: 100%;
+            align-content: center;
+            align-items: center;
+               
+        }
+        .footer-right-container-icon{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            padding: 30px 0 20px 20px;
+            align-content: center;
+            align-items: center;
+            div{
+                display: flex;
+                justify-content: space-around;
+
+            }
+            button{
+                
+                border-radius: 150px;
+                padding: 10px;
+                background: transparent;
+                border: 1px solid rgba(0, 0, 0, 0.199);
+        
+            }
+        }
+    }
+}

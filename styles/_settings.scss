@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "font1";
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+@font-face{
+    font-family: "font2";
+    src: url(../assets/fonts/Merriweather-Light.ttf);
+}
+$font1:font1, sans-serif;
+$font2:font2, sans-serif;
+$color1:rgb(252, 252, 252);
+$color2:rgb(22, 22, 22);
+$color3:rgb(231, 230, 230);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(../assets/images/bg.jpg) center/cover fixed;
+   font-family: $font2, sans-serif;
+   width: 80%;
+   margin: 0 auto;
+   list-style: none;
+   height: 100vh;
+}
+a{
+    font-style: none;
+    color: $color2;
+}
+
+.fullstory{
+    background: transparent;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-family: $font1, sans-serif;
+    font-weight: 900;
+    transition: 0.5s;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+
+    &:hover{
+        background: $color3;
+        letter-spacing: 3px;
+    }
+}
+    

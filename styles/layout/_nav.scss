@@ -1,0 +1,64 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.24);
+    
+    .nav-left{
+        display: flex;
+        min-width: 300px;
+
+        button{
+            display: flex;
+            align-items: center;
+            min-height: 80px;
+            padding: 10px;
+            font-family: $font1;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: transparent;
+            border: none;
+            font-weight: 600;
+            color: $color1;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover{
+                color: $color2;
+                background: $color3;
+            }
+        }
+    }
+    .nav-right{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 200px;
+        cursor: pointer;
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+
+            li{
+                list-style: none;
+                i{
+                    color: $color1; 
+                    font-size: 1rem;
+                    transition: 0.4s;
+                    &:hover{
+                        color: $color3;
+                        font-size: 1.5rem;
+
+
+                    }
+                }
+            }
+            
+        }
+       
+    }
+  
+}
