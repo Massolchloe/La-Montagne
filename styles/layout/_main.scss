@@ -2,7 +2,6 @@
     background: $color1;
     text-align: center;
     display: block;
-    height: 950px;
     position: relative;
     h3:before{
         content: "";
@@ -60,8 +59,13 @@
         width: 70%;
         margin: 0 auto;
     }
+    .btn-main{
+        background: $color1;
+        padding-bottom: 40px ;
+    }
     button{
         display: block;
+        padding: 10px 40px ;
         margin: 30px auto;
     }
 }
