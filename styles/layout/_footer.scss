@@ -1,7 +1,14 @@
 footer{
     display: grid;
     grid-template-columns: 50% 50% ;
-    background: $color3;
+    background: $grey2;
+    width: 90%;
+    margin: 0 auto 70px;
+    @media screen and (max-width: 750px) {
+       display: block;
+        
+    }
+
     .footer-left{
             display: grid;
             grid-template-rows: 15% 15% 35% 35%;
@@ -60,7 +67,7 @@ footer{
                 display: block;
                 margin: 20px 0 10px 20px;
                 width: 40%;
-                border: 1px solid $color2;
+                border: 1px solid $grey1;
                 text-transform: uppercase;
                 font-size: 0.8rem;
                 letter-spacing: 2px;
@@ -69,7 +76,7 @@ footer{
                 cursor: pointer;
                 transition: 0.4s;
                 &:hover{
-                    background: $color1;
+                    background: $white1;
                     letter-spacing: 3px;
 
                 }
@@ -134,7 +141,7 @@ footer{
                     transition: 0.4s;
                 
                     &:hover{
-                        background: $color1;
+                        background: $white1;
                         font-size: 1.2rem;
 
                     }

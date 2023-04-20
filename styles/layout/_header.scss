@@ -1,46 +1,123 @@
 header{
-   min-height: 400px;
     text-align: center;
-    margin: 10px;
-   h1{
-    color:$color1;
-     font-family: $font1;
-     padding-top: 200px;
-     padding-bottom: 50px;
-     font-size: 4rem;
-     text-transform: uppercase;
-   }
-   p{
-    color: $color1;
-    font-family: $font1;
-    font-style: italic;
-    font-weight: 200;
-   }
-    button{
-        background: transparent;
-        border-radius: 300px ;
-        border: 2px solid $color1;
-        padding: 10px;
-        width: 40px;
-        height: 40px;
-        margin: 50px;
-        cursor: pointer;
-        
+    .header-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        transform: translateY(50%);
+        opacity: 0;
+        position: relative;
+        animation: titlemove 2s forwards;
+        h1{
+            @include title;
+            font-size: 4rem;
+            color: $white1;
+            width: 60%;
+            font-weight: 800;
+            @media screen and (max-width: 900px) {
+                font-size: 2rem;
+                
+            }
+        }
+        p{
+            color: $white1;
+            font-family: $font1;
+            font-style: italic;
+            font-weight: 200;
+            margin: 30px auto 70px;
+        }
+        span{
+            border: 1px solid $white1;
+            border-radius: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+            transition: 0.5s;
+            &:hover{
+                font-size: 1.5rem;
+                border: 1px solid $grey1;
+            }
+        }
+        @keyframes titlemove {
+            to{
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+        }
     }
-   i{
-    display: block;
-    color: $color1;
-    font-size: 1rem;
-    border: 1px $color1;
-    border-radius: 150px;
-    transition: 0.4s;
-        &:hover{
-        color: $color2;
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        height: 65px;
+        z-index: 100;
+        content: "";
+        position: absolute;
+        background: rgba(255, 255, 255, 0.253);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .nav-left{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover li:not(:hover){
+                background: none;
+                color: $white1;
+            }
+            
+            li{
+                @include title;
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+                font-weight: 700;
+                padding: 10px;
+                color: $white1;
+                height: 65px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                @media screen and (max-width: 900px) {
+                    font-size: 0.6rem;
+                    
+                }
+                &:hover{
+                    color: $black1;
+                    background: $grey2;
+                }
+                &:first-child{
+                    color: $black1;
+                    background: $grey2;
+                }
+            }
+            
 
         }
-                
-               
 
-}
- 
+    }
+    .nav-right ul{
+        display: flex;
+        flex-direction: row;
+        li{
+            &:hover{
+            font-size: 1.5rem;
+            color: $grey1;
+            }
+        }
+            i{
+            padding: 25px;
+            @media screen and (max-width: 581px) {
+                display: none;
+                
+            }
+        }
+   
+    }
 }

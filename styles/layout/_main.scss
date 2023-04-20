@@ -1,66 +1,80 @@
-.main-top{
-    background: $color1;
-    text-align: center;
-    display: block;
-    position: relative;
-    h3:before{
-        content: "";
-        height: 1px;
-        position: absolute;
-        width: 25%;
-        transform: translate(-25% 25%);
-        background-color: $color3;
-        top: 60px;
-        bottom: 50px;
-        left: 150px;
-    }
-    h3{
-        font-weight: 200;
-        font-size: 0.9rem;
-        padding: 50px;
-        position: relative;
-    }
-    h3:after{
-        content: "";
-        height: 1px;
-        position: absolute;
-        width: 25%;
-        transform: translate(-25% 25%);
-        background-color: $color3;
-        top: 60px;
-        bottom: 50px;
-        right: 150px;
-
-    }
-    h2{
-        text-transform: uppercase;
-        font-family: $font1;
-        font-size: 2rem;
+main{
+    background: $white1;
+    width: 90%;
+    margin: 0 auto 60px;
+    .main-top{
+        width: 80%;
+        margin: 0 auto;
         text-align: center;
-        width: 60%;
-        margin: 0 auto;
-        font-weight: 900;
-
-    }
-    p{
-        color: black;
-        font-family: $font2;
-        font-style: italic;
-        font-weight: 400;
-        font-size: 0.8rem;
-        width: 60%;
-        margin: 0 auto;
-        padding: 50px;
-        line-height: 40px;
-    }
-
-    img{
         display: block;
-        width: 70%;
-        margin: 0 auto;
+            h3{
+                font-weight: 200;
+                font-size: 0.9rem;
+                padding: 50px;
+                position: relative;
+                    &:before{
+                        content: "";
+                        height: 1px;
+                        position: absolute;
+                        width: 37%;
+                        background-color: $grey1;
+                        top: 50%;
+                        left: 0;
+                        @media screen and (max-width: 681px) {
+                            width: 25%;
+                            
+                        }
+                    }
+                    &:after{
+                        content: "";
+                        height: 1px;
+                        position: absolute;
+                        width: 37%;
+                        background-color: $grey1;
+                        top: 50%;
+                        right: 0;
+                        @media screen and (max-width: 681px) {
+                            width: 25%;
+                            
+                        }
+                    }
+                   
+            }
+
     }
+        h2{
+            text-transform: uppercase;
+            font-family: $font1;
+            font-size: 2rem;
+            text-align: center;
+            width: 60%;
+            margin: 0 auto;
+            font-weight: 900;
+
+    }
+        p{
+            color: black;
+            font-family: $font2;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 0.8rem;
+            width: 60%;
+            margin: 0 auto;
+            padding: 50px;
+            line-height: 40px;
+            @media screen and (max-width: 681px) {
+                font-size: 0.6rem;
+                width: 90%;
+                
+            }
+        }
+
+        img{
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
     .btn-main{
-        background: $color1;
         padding-bottom: 40px ;
     }
     button{
@@ -68,13 +82,16 @@
         padding: 10px 40px ;
         margin: 30px auto;
     }
-}
-.main-bottom{
+    .main-bottom{
     display: grid;
     grid-template-columns: 50% 50%;
-    background: $color1;
+    background: $white1;
     text-align: center;
-    border-top: 1px solid $color3;
+    border-top: 1px solid $grey1;
+    @media screen and (max-width: 681px) {
+        display: block;
+        
+    }
 
     h5{
         font-size: 0.8rem;
@@ -112,13 +129,11 @@
         padding-bottom: 50px;
     }
     .main-bottom-containers-left{
-        border-right: 1px solid $color3;
+        border-right: 1px solid $grey1;
     }
 
 
+    }
 }
-.vide{
-    background: transparent;
-    display: block;
-    height: 40px;
-}
+
+
